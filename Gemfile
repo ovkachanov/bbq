@@ -15,6 +15,10 @@ gem 'jquery-rails'
 gem 'twitter-bootstrap-rails'
 gem 'devise'
 
+group :production do
+  gem 'pg'
+end
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'sqlite3'
