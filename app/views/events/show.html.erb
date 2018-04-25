@@ -13,9 +13,10 @@
             <p><%= @event.description %></p>
           </div>
 
-          <% if current_user_can_edit?(@event) %>
+          <% if current_user_has_the_right?(@event) %>
             <div class="buffer-both">
               <%= link_to 'Изменить', edit_event_path(@event), class: 'btn btn-primary' %>
+              <%= link_to 'Удалить', @event, method: :delete, data: {confirm: t('views.confirm')}, class: 'btn btn-danger' %>
             </div>
           <% end %>
         </div>

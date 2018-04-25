@@ -20,6 +20,7 @@ ru:
         few: ошибок
         four: ошибки
         many: ошибок
+
   controllers:
     events:
       created: 'Вы создали новое мероприятие'
@@ -27,6 +28,7 @@ ru:
       destroyed: 'Вы удалили мероприятие :('
     users:
       updated: 'Вы обновили свой профиль'
+
   app:
     name: 'Шашлыки'
     errors:
@@ -34,3 +36,6 @@ ru:
       few: 'ошибки'
       many: 'ошибок'
     errors_form: 'Форма содержит:'
+
+  views:
+    confirm: 'Вы уверены?'
