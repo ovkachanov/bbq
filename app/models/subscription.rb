@@ -8,6 +8,8 @@ class Subscription < ApplicationRecord
   validates :user, uniqueness: {scope: :event_id}, if: 'user.present?'
   validates :user_email, uniqueness: {scope: :event_id}, unless: 'user.present?'
 
+  after_validation :check_dublicate_email
+
   def user_name
     if user.present?
       user.name
@@ -21,6 +23,12 @@ class Subscription < ApplicationRecord
       user.email
     else
       super
+    end
+  end
+
+  def check_dublicate_email
+    if User.where(email: user_email).present? || Subscription.where(user_email: user_email, event_id: event_id).present?
+      errors.add :user_email, I18n.t('controllers.subscriptions.email_uniq')
     end
   end
 end
