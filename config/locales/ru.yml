@@ -3,7 +3,10 @@ ru:
     models:
       user: 'Пользователь'
       event: 'Событие'
-
+      subscription: 'Подписка'
+      comment: 'Комментарий'
+      photo: 'Фотография'
+      
     attributes:
       user:
         email: 'Email'
@@ -22,6 +25,14 @@ ru:
         few: ошибок
         four: ошибки
         many: ошибок
+      comment:
+        user_name: 'Ваше имя'
+        body: 'Комментарий'
+      subscription:
+        user_name: 'Ваше имя'
+        user_email: 'Ваш email'
+      photo:
+        photo: 'Фотография'
 
   controllers:
     events:
@@ -40,6 +51,10 @@ ru:
       error: 'Подписка/отписка не сработала'
       author?: 'Вы автор этого события! Подписка не возможна!'
       email_uniq: "Занят другим пользователем! Войдите в систему или зарегистрируйтесь под другим e-mail"
+    photos:
+      error: 'Что-то не так с фоткой'
+      created: 'Вы добавили фотографию к событию'
+      destroyed: 'Вы удалили фотку'
 
   app:
     name: 'Шашлыки'
