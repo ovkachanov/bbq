@@ -19,6 +19,8 @@ gem 'devise-i18n'
 gem 'rails-i18n', '~> 5.1'
 gem 'carrierwave'
 gem 'rmagick'
+gem 'cloudinary'
+gem 'fog'
 
 group :production do
   gem 'pg'
