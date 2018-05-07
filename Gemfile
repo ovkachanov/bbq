@@ -19,7 +19,6 @@ gem 'devise-i18n'
 gem 'rails-i18n', '~> 5.1'
 gem 'carrierwave'
 gem 'rmagick'
-gem 'cloudinary'
 gem 'fog'
 
 group :production do
@@ -36,6 +35,5 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem "better_errors"
   gem "binding_of_caller"
 end
