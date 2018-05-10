@@ -1,0 +1,31 @@
+<%= bootstrap_devise_error_messages! %>
+<div class="panel panel-default devise-bs">
+  <div class="panel-heading">
+    <h2><%= t('devise.forgot_your_password') %></h2>
+  </div>
+  <div class="panel-body">
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+      <%= devise_error_messages! %>
+      <%= f.hidden_field :reset_password_token %>
+
+      <div class="form-group">
+        <%= f.label :password, t('devise.new_password') %><br />
+        <% if @minimum_password_length %>
+          <em><%= t('devise.shared.minimum_password_length', count: @minimum_password_length) %></em><br />
+        <% end %>
+        <%= f.password_field :password, autofocus: true, autocomplete: "off" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :password_confirmation, t('devise.confirm_new_password') %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.submit t('devise.change_my_password'), class: 'btn btn-success' %>
+    <% end %>
+    </div>
+  </div>
+</div>
+<%= render 'devise/shared/links' %>
+

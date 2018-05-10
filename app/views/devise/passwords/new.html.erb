@@ -1,0 +1,23 @@
+<%= bootstrap_devise_error_messages! %>
+<div class="panel panel-default devise-bs">
+  <div class="panel-heading">
+    <h2><%= t('devise.forgot_your_password') %></h2>
+  </div>
+  <div class="panel-body">
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: {method: :post}) do |f| %>
+      <%= devise_error_messages! %>
+
+      <div class="form-group">
+        <%= f.label "Ваш e-mail" %><br/>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.submit t('devise.send_me_reset_password_instructions'), class: 'btn btn-primary' %>
+    <% end %>
+    </div>
+  </div>
+</div>
+<%= render 'devise/shared/links' %>
+
+
