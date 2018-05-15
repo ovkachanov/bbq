@@ -13,4 +13,5 @@
 //= require rails-ujs
 //= require jquery
 //= require twitter/bootstrap
+//= require map.js
 //= require_tree .
