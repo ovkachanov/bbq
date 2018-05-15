@@ -49,3 +49,8 @@
   width: 100%;
   height: 400px;
 }
+
+.event-photo {
+  display: inline-block;
+  margin-right: 20px;
+}

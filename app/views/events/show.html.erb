@@ -20,9 +20,9 @@
             </div>
           <% end %>
         </div>
-        <div class="col-md-6">
-          <div class="event-map" id="map" data-address="<%= @event.address %>"></div>
-        </div>
+    <div class="col-md-6">
+      <div class="event-map" id="map" data-address="<%= @event.address %>"></div>
+    </div>
       </div>
     </div>
   </div>
@@ -31,6 +31,7 @@
     <div class="col-md-8">
       <div class="event-photos">
         <div class="event-photos-gallery">
+          <h3>Фотогаллерея события</h3>
           <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
         </div>
 
