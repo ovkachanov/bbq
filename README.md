@@ -1,24 +1,42 @@
-# README
+# Приложение "Шашлыки"
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Краткое описание
+Приложение предназначено для создания своих и посещения других мероприятий.
 
-Things you may want to cover:
+Для создания собственного события и проявления активности на страницах других мероприятий необходимо пройти регистрацию.
+На странице события добавлена карта для отображения геолокации события. В приложении реализована система оповещения новых подписок, комментариев и фотографий.
+Для сохранения приватности добавлена возможность входа на страницу события после ввода PIN-кода.
 
-* Ruby version
+### Быстрый запуск
+Для запуска приложения Вам необходим интерпретатор [Ruby](https://ru.wikipedia.org/wiki/Ruby) и [Rails](https://ru.wikipedia.org/wiki/Ruby_on_Rails).
+Проект написан на Ruby v. 2.4.3, Rails v. 5.2.0
+После клонирования репозитория выполните команды:
 
-* System dependencies
+    sudo apt-get install imagemagick libmagickwand-dev
+    bundle install
+    bundle exec rake db:mirgate
 
-* Configuration
 
-* Database creation
+#### Переменные окружения
+Для корректной работы приложения укажите следующие переменные окружения:
 
-* Database initialization
+SendGrid:
 
-* How to run the test suite
+ - SENDGRID_USERNAME
+   
+ - SENDGRID_PASSWORD
+ 
+Amazon S3 Storage:
+    
+ - S3_ACCESS_KEY
+    
+ - S3_BUCKET_NAME
+    
+ - S3_BUCKET_REGION
+ 
+ Для запуска локального сервера необходимо выполнить команду:
+ 
+     rails s
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
+[Приложение](http://bbq-patry.herokuapp.com/) развернуто на Heroku
